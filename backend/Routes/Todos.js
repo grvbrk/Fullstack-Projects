@@ -8,9 +8,7 @@ const {
 } = require("../Controllers/Todos");
 const TodoRouter = express.Router();
 
-TodoRouter.route("/todos")
-  .get(getAllTodos)
-  .post(postOneTodo)
+TodoRouter.route("/todos").get(getAllTodos).post(postOneTodo);
 TodoRouter.route("/todos/:id")
   .get(getOneTodo)
   .patch(patchOneTodo)
