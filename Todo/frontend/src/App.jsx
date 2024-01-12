@@ -1,13 +1,5 @@
 import { useState } from "react";
 import { todoSchema } from "./schema/todo";
-import { toFormikValidationSchema } from "zod-formik-adapter";
-import { useFormik } from "formik";
-
-const initialValues = {
-  title: "",
-  description: "",
-  completed: "",
-};
 
 function App() {
   
