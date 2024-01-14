@@ -1,9 +1,0 @@
-**/.env
-**/node_modules/
-**/tests/
-**/test/
-**/package.json
-**/package-lock.json
-**/.eslintrc.cjs
-**/vite.config.js
-**/Practice
