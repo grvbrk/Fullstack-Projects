@@ -1,6 +1,7 @@
 type optionType = {
   name: string;
   age: number;
+  image: string;
 };
 
 type propsType = {
@@ -8,14 +9,14 @@ type propsType = {
 };
 
 function Option({ option }: propsType) {
-  console.log(option);
   return (
-    <div>
-      {option.map((item, index) => (
-        <div key={index}>
-          <h1>{item.name}</h1>
-          <h1>{item.age}</h1>
-        </div>
+    <div className="options-container">
+      {option.map(({name, age, image}, index) => (
+        <button className="options" key={index}>
+          <img src={image} alt="avatar" />
+          <p>{name}</p>
+          <p>{age}</p>
+        </button>
       ))}
     </div>
   );

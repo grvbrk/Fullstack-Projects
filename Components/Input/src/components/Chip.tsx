@@ -1,7 +1,12 @@
+import avatarPng from "../assets/avatar.png"
 
-function Chip() {
+type propType = {
+  image: string
+}
+
+function Chip({image}: propType) {
   return (
-    <div>Chip</div>
+    <img src={avatarPng} alt="" />
   )
 }
 
