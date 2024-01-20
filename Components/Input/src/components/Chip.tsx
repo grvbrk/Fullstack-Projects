@@ -1,13 +1,27 @@
-import avatarPng from "../assets/avatar.png"
+import { optionType } from "./Option";
+import { useMemo, memo } from "react";
 
-type propType = {
-  image: string
-}
+type propsType = {
+  option: optionType[];
+  optionSelected: (value: string) => void;
+};
+function Chip({ option, optionSelected }: propsType) {
+  const selectedOptions = useMemo(() => {
+    return option.filter((item) => item.isSelected === true);
+  }, [option]);
 
-function Chip({image}: propType) {
   return (
-    <img src={avatarPng} alt="" />
-  )
+    <>
+      {selectedOptions.map(({ id, image }) => {
+        return (
+          <div key={id} className="chip-container">
+            <img src={image} alt="Avatar" />
+            <button onClick={() => optionSelected(id)}>X</button>
+          </div>
+        );
+      })}
+    </>
+  );
 }
 
-export default Chip
+export default memo(Chip);

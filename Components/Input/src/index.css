@@ -15,24 +15,31 @@
 }
 
 .input-container {
+  /* border: 1px solid green; */
+
   display: flex;
+  gap: 5px;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   width: 300px;
+  flex-wrap: wrap;
   /* margin-bottom: 200px; */
   border-radius: 8px;
   background-color: antiquewhite;
 }
 
 .input {
+  /* border: 1px solid red; */
+  display: flex;
+  min-width: 50px;
+  flex: 1 1 50px;
   padding: 15px 10px;
-  width: 100%;
   border-radius: 8px;
   border: none;
   background-color: antiquewhite;
 }
 
-input:focus{
+input:focus {
   outline: none;
 }
 
@@ -68,10 +75,31 @@ input:focus{
   border: none;
 }
 
-.options>img{
+.options > img {
   width: 30px;
 }
 
-.options:hover{
-  background-color:rgb(246, 212, 158) ;
+.options:hover {
+  background-color: rgb(246, 212, 158);
+}
+
+/* Chip Styles */
+
+.chip-container {
+  display: flex;
+  background-color: rgb(246, 212, 158);
+  padding-right: 10px;
+  margin-left: 5px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.12);
+}
+.chip-container > img {
+  width: 30px;
+}
+
+.chip-container > button {
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  font-size: 11px;
 }
